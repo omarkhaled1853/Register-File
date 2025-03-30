@@ -1,0 +1,51 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/CSED/year 3/term 6/computer architecture/labs/1
+Eregisterfile
+Z0 w1743354160
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dE:/CSED/year 3/term 6/computer architecture/labs/1/RegisterFile
+Z5 8E:/CSED/year 3/term 6/computer architecture/labs/1/RegisterFile/RegisterFile.vhd
+Z6 FE:/CSED/year 3/term 6/computer architecture/labs/1/RegisterFile/RegisterFile.vhd
+l0
+L8
+VKj=[GiE96[@Ib`nEhhK]V0
+!s100 9:;AYb`D<4Zm51Y1UU09g3
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1743354163
+!i10b 1
+Z9 !s108 1743354163.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|E:/CSED/year 3/term 6/computer architecture/labs/1/RegisterFile/RegisterFile.vhd|
+Z11 !s107 E:/CSED/year 3/term 6/computer architecture/labs/1/RegisterFile/RegisterFile.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R1
+R2
+R3
+DEx4 work 12 registerfile 0 22 Kj=[GiE96[@Ib`nEhhK]V0
+l29
+L21
+VC6m4B1]@cd>O8V4NNGe^C1
+!s100 <iUZb4GnY@QZNB>oQQDBT0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
