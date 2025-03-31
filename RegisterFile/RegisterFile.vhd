@@ -31,7 +31,7 @@ ARCHITECTURE registerFileBehavior OF registerFile IS
     reg_file_process1: process (clk)
     BEGIN
 	-- Writing in the first half cycle
-        if rising_edge(clk) THEN
+        if falling_edge(clk) THEN
 	    if reg_write = '1' THEN
             -- Don't write to register 0 (always zero)
                 if to_integer(unsigned(write_reg)) /= ZERO_REG THEN
@@ -40,21 +40,14 @@ ARCHITECTURE registerFileBehavior OF registerFile IS
             END IF;	
 	END IF;
 	-- Reading in the second half cycle
-	if falling_edge(clk) THEN
-	    if (reg_write = '1' and write_reg = read_reg1) then
-                read_data1 <= write_data_temp;
-            else
-                read_data1 <= registers(to_integer(unsigned(read_reg1)));
-            end if;
-	    if (reg_write = '1' and write_reg = read_reg2) then
-                read_data2 <= write_data_temp;
-            else
-                read_data2 <= registers(to_integer(unsigned(read_reg2)));
-            end if;
-	END IF;
     END PROCESS;
 	
-	-- Update register
 	registers(to_integer(unsigned(write_reg))) <= write_data_temp when (reg_write = '1');
+
+	read_data1 <= write_data_temp when (reg_write = '1' and write_reg = read_reg1) else 
+                registers(to_integer(unsigned(read_reg1)));
+
+	read_data2 <= write_data_temp when (reg_write = '1' and write_reg = read_reg2) else 
+                registers(to_integer(unsigned(read_reg2)));
 
 end registerFileBehavior;
