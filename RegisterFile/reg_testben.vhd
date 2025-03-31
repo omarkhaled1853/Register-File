@@ -49,7 +49,7 @@ begin
 		write_r(0) <= '1';
 		w_data(0) <= '1';
 		wait for 1 ns;
-		assert unsigned(r_data1) = 1 report "r_data1 must be 1 as we write in register number 1";
+		assert unsigned(r_data1) = 1 report "r_data1 must be 1 as we write 1 in register number 1";
 
 		reg_w <= '0';
 		read_r1(0) <= '1';
@@ -67,7 +67,28 @@ begin
 		w_data(1) <= '0';
 		w_data(0) <= '1';
 		wait for 1 ns;
-		assert unsigned(r_data2) = 1 report "r_data2 must be 1 as we write in register number 2";
+		assert unsigned(r_data2) = 1 report "r_data2 must be 1 as we write 1 in register number 2";
+
+		reg_w <= '1';
+		read_r1(0) <= '1';
+		read_r2(1) <= '1';
+		write_r(0) <= '0';
+		write_r(1) <= '1';
+		w_data(0) <= '1';
+		w_data(1) <= '1';
+		wait for 1 ns;
+		assert unsigned(r_data2) = 3 report "r_data2 must be 3 as we write 3 in register number 2";
+
+
+		reg_w <= '1';
+		read_r1(0) <= '1';
+		read_r2(1) <= '1';
+		write_r(0) <= '1';
+		write_r(1) <= '0';
+		w_data(0) <= '1';
+		w_data(1) <= '1';
+		wait for 1 ns;
+		assert unsigned(r_data1) = 3 report "r_data1 must be 3 as we write 3 in register number 1";
 
 	end process;
 
